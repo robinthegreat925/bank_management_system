@@ -1,0 +1,24 @@
+# Makefile for Bank Management System in C
+
+# Compiler
+CC = gcc
+
+# Compiler flags
+CFLAGS = -Wall -Wextra -std=c11
+
+# Source files
+SRCS = main.c bank.c
+
+# Output executable
+TARGET = bank
+
+# Default target
+all: $(TARGET)
+
+# Link object files to create the final executable
+$(TARGET): $(SRCS)
+	$(CC) $(CFLAGS) $(SRCS) -o $(TARGET)
+
+# Clean up build artifacts
+clean:
+	rm -f $(TARGET)
